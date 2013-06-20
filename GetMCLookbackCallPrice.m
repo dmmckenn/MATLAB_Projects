@@ -5,6 +5,7 @@ function call_price = GetMCLookbackCallPrice( stock_init, strike, num_periods, v
 % over num_periods. Performs num_iterations paths in Monte-Carlo
 % simulation. Volatility of stock is voltatility, risk-free rate over
 % the option's life is int_rate, and strike price is strike.
+% Also computes corresponding (Monte Carlo) European call option price.
 
 delta_t = exp_time/num_periods;
 u = exp(volatility*sqrt(delta_t));
